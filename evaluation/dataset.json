@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "description": "Evaluation dataset for Deep Research Agent",
+    "created": "2024-01-15",
+    "version": "1.0",
+    "categories": [
+      "factual",
+      "multi_hop",
+      "comparison",
+      "insufficient_evidence",
+      "conflicting_sources"
+    ]
+  },
+  "questions": [
+    {
+      "id": "factual_1",
+      "category": "factual",
+      "question": "What is retrieval augmented generation and how does it work?",
+      "expected_concepts": ["retrieval", "vector database", "embeddings", "LLM", "context"],
+      "difficulty": "easy",
+      "notes": "Basic factual question - should be well covered by sources"
+    },
+    {
+      "id": "factual_2", 
+      "category": "factual",
+      "question": "Who created the Transformer architecture and when was the paper published?",
+      "expected_concepts": ["Vaswani", "Google", "2017", "Attention Is All You Need"],
+      "difficulty": "easy",
+      "notes": "Specific factual lookup"
+    },
+    {
+      "id": "factual_3",
+      "category": "factual",
+      "question": "What is the context window size of GPT-4?",
+      "expected_concepts": ["128k", "tokens", "context length"],
+      "difficulty": "easy",
+      "notes": "May have varying answers based on model version"
+    },
+    {
+      "id": "multi_hop_1",
+      "category": "multi_hop",
+      "question": "What company created the programming language used to build TensorFlow, and when was that language first released?",
+      "expected_concepts": ["Python", "Guido van Rossum", "1991", "Google"],
+      "difficulty": "medium",
+      "notes": "Requires connecting TensorFlow -> Python -> Python's history"
+    },
+    {
+      "id": "multi_hop_2",
+      "category": "multi_hop",
+      "question": "The CEO of the company that created ChatGPT previously co-founded another startup. What was it called and what did it do?",
+      "expected_concepts": ["Sam Altman", "Loopt", "location-based", "social"],
+      "difficulty": "medium",
+      "notes": "Requires OpenAI -> Sam Altman -> Loopt connection"
+    },
+    {
+      "id": "comparison_1",
+      "category": "comparison",
+      "question": "Compare the architectures and use cases of BERT vs GPT. What are the key differences?",
+      "expected_concepts": ["encoder", "decoder", "bidirectional", "autoregressive", "masked language model", "classification", "generation"],
+      "difficulty": "medium",
+      "notes": "Should identify architectural differences and appropriate use cases"
+    },
+    {
+      "id": "comparison_2",
+      "category": "comparison",
+      "question": "What are the differences between LangChain and LlamaIndex for building RAG applications?",
+      "expected_concepts": ["chains", "agents", "indexes", "retrieval", "orchestration"],
+      "difficulty": "medium",
+      "notes": "Should cover different design philosophies and strengths"
+    },
+    {
+      "id": "comparison_3",
+      "category": "comparison",
+      "question": "Compare vector databases: Pinecone vs Milvus vs Chroma. When would you use each?",
+      "expected_concepts": ["managed", "open source", "scale", "local", "cloud"],
+      "difficulty": "hard",
+      "notes": "Requires nuanced comparison of three options"
+    },
+    {
+      "id": "insufficient_1",
+      "category": "insufficient_evidence",
+      "question": "What will be the exact market cap of OpenAI in 2030?",
+      "expected_behavior": "uncertainty",
+      "difficulty": "easy",
+      "notes": "Should acknowledge this is unknowable/speculative"
+    },
+    {
+      "id": "insufficient_2",
+      "category": "insufficient_evidence",
+      "question": "What is the internal architecture of Claude's neural network?",
+      "expected_behavior": "uncertainty",
+      "difficulty": "easy",
+      "notes": "Should acknowledge this info is not publicly available"
+    },
+    {
+      "id": "conflicting_1",
+      "category": "conflicting_sources",
+      "question": "Is AI going to take most jobs in the next 10 years?",
+      "expected_behavior": "acknowledge_conflict",
+      "difficulty": "medium",
+      "notes": "Sources will have different predictions - should cite multiple viewpoints"
+    },
+    {
+      "id": "conflicting_2",
+      "category": "conflicting_sources",
+      "question": "What is the best programming language for machine learning?",
+      "expected_behavior": "acknowledge_conflict",
+      "difficulty": "easy",
+      "notes": "Subjective question - should present multiple perspectives"
+    },
+    {
+      "id": "recent_1",
+      "category": "factual",
+      "question": "What are the latest developments in AI agents and autonomous systems?",
+      "expected_concepts": ["agents", "autonomous", "tools", "planning"],
+      "difficulty": "medium",
+      "notes": "Tests ability to find recent information"
+    },
+    {
+      "id": "technical_1",
+      "category": "factual",
+      "question": "How does attention mechanism work in transformers?",
+      "expected_concepts": ["query", "key", "value", "softmax", "self-attention"],
+      "difficulty": "medium",
+      "notes": "Technical explanation with specific components"
+    },
+    {
+      "id": "multi_turn_1",
+      "category": "multi_turn",
+      "question": "What is fine-tuning in machine learning?",
+      "followup": "What are the main techniques for fine-tuning LLMs specifically?",
+      "expected_concepts_q1": ["pre-trained", "adapt", "task-specific"],
+      "expected_concepts_q2": ["LoRA", "PEFT", "full fine-tuning", "instruction tuning"],
+      "difficulty": "medium",
+      "notes": "Tests conversation continuity"
+    }
+  ]
+}
